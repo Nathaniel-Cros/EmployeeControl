@@ -7,12 +7,14 @@ import { RegisterEmployeeComponent } from './Components/register-employee/regist
 import { TableEmployeesComponent } from './Components/table-employees/table-employees.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { RegisterSkillsComponent } from './Components/register-skills/register-skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterEmployeeComponent,
-    TableEmployeesComponent
+    TableEmployeesComponent,
+    RegisterSkillsComponent,
   ],
   imports: [
     BrowserModule,

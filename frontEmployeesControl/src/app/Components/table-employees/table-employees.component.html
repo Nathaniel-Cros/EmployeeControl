@@ -7,16 +7,23 @@
     <th scope="col">Puesto</th>
     <th scope="col">Cumpleaños</th>
     <th scope="col">Domicilio</th>
+    <th scope="col">Skills</th>
   </tr>
   </thead>
-  <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
+  <tbody class="text-center">
+  <tr *ngFor="let employee of employees; let i = index">
+    <th scope="row">{{ i+1 }}</th>
+    <td hidden>{{ employee.employeeId }}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.area}}</td>
+    <td>{{employee.birthday}}</td>
+    <td>{{employee.address}}</td>
+    <td>
+      <ul *ngFor="let skill of employee.skills" class="list-group">
+        <li class="list-group-item">{{ skill.name }}</li>
+      </ul>
+    </td>
   </tr>
 
   </tbody>

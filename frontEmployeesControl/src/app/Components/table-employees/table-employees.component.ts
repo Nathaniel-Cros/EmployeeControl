@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Employees} from '../../interfaces/employees';
 
 @Component({
   selector: 'app-table-employees',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-employees.component.css']
 })
 export class TableEmployeesComponent implements OnInit {
+  @Input() employees: Array<Employees>;
 
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit(): void {
   }
 

@@ -34,5 +34,22 @@
       Verifica este campo.
     </div>
   </div>
+  <div class="row">
+    <div class="form-group col-sm-12 col-lg-8">
+      <label>Skill</label>
+      <input type="text" class="form-control" formControlName="skill" />
+      <div *ngIf="flagViewError" class="alert alert-danger" role="alert">
+        Son 4 Caracteres minimos.
+      </div>
+    </div>
+    <div class="form-group col-sm-12 col-lg-3 text-center">
+      <button style="margin-top: 30px;" (click)="addSkill()" class="btn btn-primary">Agregar</button>
+    </div>
+  </div>
+  <div>
+    <ul class="list-group">
+  <app-register-skills [skills]="skills" (RemoveId)="removeElement($event)"></app-register-skills>
+    </ul>
+  </div>
   <button (click)="onSubmit()" class="btn btn-primary">Guardar</button>
 </form>
