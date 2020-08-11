@@ -1,0 +1,38 @@
+<form [formGroup]="employeeForm" >
+  <div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control" formControlName="name"/>
+    <div *ngIf="employeeForm.controls.name.invalid && employeeForm.touched" class="alert alert-danger" role="alert">
+      Verifica este campo.
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" formControlName="email"/>
+    <div *ngIf="employeeForm.controls.email.invalid && employeeForm.touched" class="alert alert-danger" role="alert">
+      Verifica este campo.
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Puesto</label>
+    <input type="text" class="form-control" formControlName="area"/>
+    <div *ngIf="employeeForm.controls.area.invalid && employeeForm.touched" class="alert alert-danger" role="alert">
+      Verifica este campo.
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Fecha de Nacimiento</label>
+    <input type="date" class="form-control" formControlName="birthday"/>
+    <div *ngIf="employeeForm.controls.birthday.invalid && employeeForm.touched" class="alert alert-danger" role="alert">
+      Verifica este campo.
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Domicilio</label>
+    <input type="text" class="form-control" formControlName="address"/>
+    <div *ngIf="employeeForm.controls.address.invalid && employeeForm.touched" class="alert alert-danger" role="alert">
+      Verifica este campo.
+    </div>
+  </div>
+  <button (click)="onSubmit()" class="btn btn-primary">Guardar</button>
+</form>
